@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Post;
 class viewController extends Controller
 {
     public function index(){
@@ -12,11 +12,13 @@ class viewController extends Controller
 
     public function blog()
     {
-        return view('blog');
+        $post = Post::all();
+        return view('blog',compact('post'));
     }
 
     public function news($id){
-        return view('news');
+        $post = Post::where('id',$id)->first();
+        return view('news', compact('post'));
     }
 
 

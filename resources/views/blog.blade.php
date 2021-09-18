@@ -19,7 +19,8 @@
 <!-- blogs -->
 <section class="section">
   <div class="container">
-    <div class="row">
+   @foreach ($post as $item)
+        <div class="row">
       <!-- blog post -->
       <article class="col-lg-4 col-sm-6 mb-5">
         <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
@@ -30,17 +31,18 @@
               <!-- post date -->
               <li class="list-inline-item mr-3 ml-0">20 september 2021</li>
               <!-- author -->
-              <li class="list-inline-item mr-3 ml-0">By Radit</li>
+              <li class="list-inline-item mr-3 ml-0">By {{ $item->fake_user }}</li>
             </ul>
             <a href="/news">
-              <h4 class="card-title">Salah,Vaksin nusantara mampu hancurkan semua jenis virus Corona dengan Efikasi 100%</h4>
+              <h4 class="card-title">{{ $item->judul }}</h4>
             </a>
             <p class="card-text"></p>
-            <a href="/news/1" class="btn btn-primary btn-sm">read more</a>
+            <a href="/news/{{ $item->id }}" class="btn btn-primary btn-sm">read more </a>
           </div>
         </div>
       </article>
     </div>
+   @endforeach
   </div>
 </section>
 <!-- /blogs -->
