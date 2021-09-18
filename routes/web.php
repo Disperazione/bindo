@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\viewController;
 /*
@@ -16,3 +17,4 @@ use App\Http\Controllers\viewController;
 Route::get('/',[viewController::class,'index']);
 Route::get('news',[viewController::class,'blog']);
 Route::get('/news/{id}', [viewController::class, 'news']);
+Route::patch('/news/{id}/comment',[CommentController::class,'add_comment'])->name('add_comment');

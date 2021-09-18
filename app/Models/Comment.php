@@ -9,9 +9,10 @@ class Comment extends Model
 {
     use HasFactory;
     protected $table = "comment";
+    protected $guarded = [];
 
     public function post()
     {
-        return $this->belongTo(Post::class,'id');
+        return $this->belongTo(Post::class,'post_id');
     }
 }

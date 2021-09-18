@@ -9,10 +9,11 @@ class Post extends Model
 {
     use HasFactory;
     protected $table = "post";
+    protected $guarded = [];
     public $incrementing = false;
 
     public function comment()
     {
-        return $this->hasMany(Comment::class,'id','post_id');
+        return $this->hasMany(Comment::class,'post_id', 'id');
     }
 }

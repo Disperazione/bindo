@@ -103,55 +103,7 @@ class PostSeeder extends Seeder
 
                                 </p>
                             </div>
-                            <!-- comment box -->
-                            <div class="col-12">
-                                <form action="#" class="row">
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control mb-4" id="name" name="name" placeholder="Full Name">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="email" class="form-control mb-4" id="mail" name="mail" placeholder="Email Address">
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea name="comment" id="comment" class="form-control mb-4"
-                                            placeholder="Comment Here..."></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" value="send" class="btn btn-primary">post comment</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- /blog details -->
-
-                <!-- recommended post -->
-                <section class="section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <h2 class="section-title">ALL Comment</h2>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <!-- blog post -->
-                            <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                                <div
-                                    class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-                                    <div class="card-body">
-                                        <!-- post meta -->
-                                        <div class="list-inline mb-3">
-                                            <!-- author -->
-                                            <h4 class="list-inline-item mr-3 ml-0">Rusman Jainudi</h4>
-                                        </div>
-                                        <p class="card-text">Terimakasih sudah membuatkan berita</p>
-                                        <p>By rusman@gmail.com</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>',
+                '
         ]);
     }
 }

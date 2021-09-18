@@ -20,6 +20,45 @@
 <!-- blog details -->
 <section class="section-sm bg-gray">
     {!! $post->post !!}
+
+    <!-- comment box -->
+    <div class="col-12">
+        <form action="{{ route('add_comment',$post->id) }}" method="POST" class="row">
+            @method('patch')
+            @csrf
+            <div class="col-sm-6">
+                <input type="text" class="form-control mb-4 @error('name') is-invalid @enderror" id="name" name="name" placeholder="Full Name">
+                @error('name')
+                 <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+
+            </div>
+            <div class="col-sm-6">
+                <input type="email" class="form-control mb-4 @error('email') is-invalid @enderror" id="mail" name="email" placeholder="Email Address">
+                @error('email')
+                 <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+            </div>
+            <div class="col-12">
+                <textarea name="comment" id="comment" class="form-control mb-4 @error('comment') is-invalid @enderror"
+                    placeholder="Comment Here..."></textarea>
+                @error('comment')
+                 <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+            </div>
+            <div class="col-12">
+                <button type="submit" value="send" class="btn btn-primary">post comment</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
 </section>
 <!-- /blog details -->
 
@@ -43,7 +82,7 @@
                             <h4 class="list-inline-item mr-3 ml-0">{{ $item->name }}</h4>
                         </div>
                         <p class="card-text">{{ $item->comment }}</p>
-                        <p>By {{ $item->email }}/p>
+                        <p>By {{ $item->email }}</p>
                     </div>
                 </div>
             </article>
@@ -52,5 +91,9 @@
         </div>
     </div>
 </section>
+</section>
+<!-- /blog details -->
+
+
 <!-- /recommended post -->
 @endsection

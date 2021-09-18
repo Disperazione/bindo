@@ -38,7 +38,6 @@
   {{-- <div class="preloader">
     <img src="{{ asset('/themes/educenter/images/preloader.gif')}}" alt="preloader">
   </div> --}}
-  <!-- preloader end -->
 
 <!-- header -->
 @include('layout.header.header');
@@ -65,6 +64,9 @@
 
 <!-- Main Script -->
 <script src="{{ asset('/themes/educenter/js/script.js')}}"></script>
+
+  <!-- preloader end -->
+@include('sweetalert::alert')
 
 </body>
 </html>
