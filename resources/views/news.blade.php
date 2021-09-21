@@ -1,7 +1,7 @@
 @extends('layout.master')
 @section('content')
 <!-- page title -->
-<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+<section class="page-title-section overlay" data-background="https://images.unsplash.com/photo-1584359983106-ef9366f27454?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=314&q=80">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
